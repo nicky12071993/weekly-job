@@ -29,7 +29,7 @@ if __name__ == '__main__':
     email_server_address = sys.argv[6]
     email_server_port_number = int(sys.argv[7])
     
-    receiver_emails_list = list(receiver_emails.split("##"))
+    receiver_emails_list = list(receiver_emails.split("#"))
 
     email_message = EmailMessage()
     email_message['From'] = sender_email
