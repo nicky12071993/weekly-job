@@ -1,4 +1,4 @@
 import sys
-x = int(sys.argv[1])
-
-print(x+1)
+x = sys.argv[1]
+y = sys.argv[2]
+print(x+y)
