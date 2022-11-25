@@ -19,7 +19,6 @@ def send_email(email_server_address, email_server_port_number, sender_email, sen
 if __name__ == '__main__':
 
     receiver_emails = sys.argv[1]
-    receiver_emails_list = receiver_emails.split(';')
 
     sender_email = sys.argv[2]
     sender_password = sys.argv[3]
@@ -29,6 +28,8 @@ if __name__ == '__main__':
                 
     email_server_address = sys.argv[6]
     email_server_port_number = int(sys.argv[7])
+    
+    receiver_emails_list = receiver_emails.split('##')
 
     email_message = EmailMessage()
     email_message['From'] = sender_email
