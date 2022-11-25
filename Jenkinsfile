@@ -8,7 +8,7 @@ stages {
 	stage ('scheduleweekyjob - Build') {
 	    steps{
 sh """ 
-/Users/i334235/opt/anaconda3/bin/python /Users/i334235/.jenkins/workspace/scheduleweekyjob/send_mail_updated.py 
+/Users/i334235/opt/anaconda3/bin/python /Users/i334235/.jenkins/workspace/scheduleweekyjob/send_mail_args.py $receiver_emails $sender_email $sender_password $email_subject $email_body $email_server_address $email_server_port_number 
  """ 
 }}
 }}
